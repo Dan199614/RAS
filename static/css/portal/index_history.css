@@ -1,0 +1,112 @@
+.index_history_h1 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.index_history_div {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.animatable {
+    /* initially hide animatable objects */
+    visibility: hidden;
+    /* initially pause animatable objects their animations */
+    animation-play-state: paused;
+}
+
+.animated {
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-play-state: running;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animated.bounceIn {
+    animation-name: bounceIn;
+}
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    60% {
+        transform: translateX(-20px);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* show objects being animated */
+.animated.bounceInRight {
+    animation-name: bounceInRight;
+}
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    60% {
+        transform: translateX(20px);
+    }
+    80% {
+        transform: translateX(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* show objects being animated */
+.animated.bounceInLeft {
+    animation-name: bounceInLeft;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* show objects being animated */
+.animated.fadeInUp {
+    animation-name: fadeInUp;
+}

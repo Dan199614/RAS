@@ -1,0 +1,20 @@
+{% extends 'system_ras/base.html' %}
+{% load static %}
+{% block content %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Система Регистрации Аварийных Ситуаций</title>
+    </head>
+    <body>
+    <div class="container-fluid row">
+        {% include 'system_ras/includes/Block1.html' %}
+        {% include 'system_ras/includes/Block2.html' %}
+        {% include 'system_ras/includes/Block3.html' %}
+    </div>
+    </body>
+    </html>
+    {% include 'system_ras/inc/modal_create_report.html' %}
+    {% include 'system_ras/inc/modal_create_chart.html' %}
+{% endblock %}

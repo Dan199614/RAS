@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru-ru" data-bs-theme="dark">
+{% load static %}
+<head>
+    {% include 'system_ras/inc/_css.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Портал</title>
+    <script type="text/javascript" src="{% static 'js/src/portal/theme_mode.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/src/jquery-4.0.0.min.js' %}"></script>
+</head>
+
+<body>
+<header style="height:60px">
+    <nav class="navbar fixed-top bg-body-tertiary" style="padding: 8px 16px 8px 16px; height: 60px;">
+        <div class="container-fluid" style="padding:0px;">
+            <div style="display: flex; align-items: center; gap: 0.5rem">
+                <a class="navbar-brand" href="/" style="display:none; text-align: center; margin-right: -200px;">
+                    <img rel="shortcut icon" type="image/png" src="{% static 'img/portal.png' %}" alt="Logo"
+                         class="d-inline-block align-text-top icons_portal">
+                </a>
+                <h4 class="bs-site-corp-color" style="font-weight:bold; margin: 0;">
+                    Система регистрации аварийных ситуаций
+                </h4>
+            </div>
+
+            <div class="d-flex gap-2 align-items-center">
+                <li class="nav-item dropdown" style="list-style-type: none; margin-right: 1rem;">
+                    <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                            id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                            data-bs-display="static" aria-label="Toggle theme (auto)">
+                        <img rel="shortcut icon" src="{% static 'svg/theme/sun.svg' %}" width="25px"
+                             height="25px" class="theme-icon-active" href="#sun-fill">
+                        <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                        <li class="pb-2">
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="light" aria-pressed="false">
+                                <img rel="shortcut icon" src="{% static 'svg/theme/sun.svg' %}" width="20px"
+                                     height="20px" style="margin-right: 1rem;">
+                                Светлая
+                            </button>
+                        </li>
+                        <li class="pb-2">
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="dark" aria-pressed="false">
+                                <img rel="shortcut icon" src="{% static 'svg/theme/night.svg' %}" width="20px"
+                                     height="20px" style="margin-right: 1rem;">
+                                Тёмная
+                            </button>
+                        </li>
+                        <li class="pb-2">
+                            <button type="button" class="dropdown-item d-flex align-items-center active"
+                                    data-bs-theme-value="auto" aria-pressed="true">
+                                <img rel="shortcut icon" src="{% static 'svg/theme/avto.svg' %}" width="20px"
+                                     height="20px" style="margin-right: 1rem;">
+                                Автоматически
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<main class="content-wrapper" style="min-height: calc(100vh - 470px); padding-top: 1vh; padding-bottom: 1vh;">
+    <div class="container-fluid" style="padding:0px;">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</main>
+
+<footer style="height: 400px;">
+    {% include 'system_ras/base_footer.html' %}
+</footer>
+<script type="text/javascript" src="{% static 'js/src/portal/base_v4.js' %}"></script>
+<script>
+    let DATA_BLOCK_1_param = {{ data_BLOCK_1.VA_SIGNALS|safe }}
+    let DATA_BLOCK_2_param = {{ data_BLOCK_2.VA_SIGNALS|safe }}
+    let DATA_BLOCK_3_param = {{ data_BLOCK_3.VA_SIGNALS|safe }}
+</script>
+{% include 'system_ras/inc/_scripts.html' %}
+</body>
+</html>

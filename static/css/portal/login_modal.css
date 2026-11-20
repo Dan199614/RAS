@@ -1,0 +1,15 @@
+.card__side {
+    transition: all 2.5s ease;
+    position: absolute;
+    height: 100%;
+    width: 33%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card__side--back {
+    transform: rotateY(180deg);
+}
+

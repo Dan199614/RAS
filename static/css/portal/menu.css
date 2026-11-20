@@ -1,0 +1,14 @@
+.menu_icon_img {
+    width: 1.5rem;
+    height: 2rem;
+}
+
+
+.max_content_popover {
+    min-width: 650px;
+}
+
+.menu_link_align {
+    padding-left: 3rem;
+    text-align: justify;
+}

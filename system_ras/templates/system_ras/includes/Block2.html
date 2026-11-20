@@ -1,0 +1,75 @@
+<div class="col d-grid gap-2">
+    <div class="d-flex justify-content-between">
+        <button class="btn btn-outline-primary w-25" id="chart_block_2">График</button>
+        <span class="fw-bold">БЛОК №2</span>
+        <button class="btn btn-outline-primary w-25" id="report_block_2">Отчет</button>
+    </div>
+    <div class="overflow-auto" style="height: 80vh;">
+        <table id="table_BLOCK_2" class="table table-borderless table-sm">
+            <thead>
+            <tr>
+                <th>Сигнал</th>
+                <th>Значение</th>
+                <th>Ед. изм.</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for name_group, id_group in data_BLOCK_2.VA_GROUPS.items %}
+                <tr class="marked_2">
+                    <td colspan="3">
+                        <div class="form-check">
+                            <input class="form-check-input group_check_VA_block_2" type="checkbox"
+                                   id="block_2_VA_group_{{ id_group }}">
+                            <label class="fw-bold form-check-label"
+                                   for="block_2_VA_group_{{ id_group }}">-{{ name_group }}-</label>
+                        </div>
+                    </td>
+                </tr>
+                {% for signal, param_signal in data_BLOCK_2.VA_SIGNALS.items %}
+                    {% if param_signal.group == id_group %}
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input {{ id_group }}_VA_check_block_2 param_checkbox" type="checkbox"
+                                           id="block_2_{{ signal }}">
+                                    <label class="form-check-label"
+                                           for="block_2_{{ signal }}">{{ param_signal.name }}</label>
+                                </div>
+                            </td>
+                            <td class="fw-bold" id="param_block_2_{{ signal }}"></td>
+                            <td>{{ param_signal.unit }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            {% for name_group, id_group in data_BLOCK_2.VD_GROUPS.items %}
+                <tr class="marked_2">
+                    <td colspan="3">
+                        <div class="form-check">
+                            <input class="form-check-input group_check_VD_block_2" type="checkbox"
+                                   id="block_2_VD_group_{{ id_group }}">
+                            <label class="form-check-label fw-bold"
+                                   for="block_2_VD_group_{{ id_group }}">-{{ name_group }}-</label>
+                        </div>
+                    </td>
+                </tr>
+                {% for signal, param_signal in data_BLOCK_2.VD_SIGNALS.items %}
+                    {% if param_signal.group == id_group %}
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input {{ id_group }}_VD_check_block_2 param_checkbox" type="checkbox"
+                                           id="block_2_{{ signal }}">
+                                    <label class="form-check-label"
+                                           for="block_2_{{ signal }}">{{ param_signal.name }}</label>
+                                </div>
+                            </td>
+                            <td class="fw-bold" colspan="2" id="param_block_2_{{ signal }}"></td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

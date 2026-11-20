@@ -1,0 +1,33 @@
+.respons-name {
+    text-decoration: none;
+}
+
+.respons-name:hover {
+    cursor: pointer;
+}
+
+
+/*----- */
+.check-mark {
+    font-size: 1em;
+    text-decoration: none !important;
+    color: #212121;;
+}
+
+.check-mark:hover {
+    cursor: pointer;
+    border: none;
+}
+
+.one {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+

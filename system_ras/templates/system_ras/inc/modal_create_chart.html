@@ -1,0 +1,63 @@
+{% load static %}
+<div class="modal fade" role="dialog" tabindex="-1" id="modal_create_chart"
+     aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_create_chart_title"></h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <canvas id="chart" class="w-100"></canvas>
+            </div>
+            <div class="border-top p-3">
+                <div class="row pb-2">
+                    <span class="fw-bold col-4">Режим построения:</span>
+                    <span class="fw-bold col-4">Временной период:</span>
+                    <span class="text-warning-emphasis col-4">Для приближения воспользуйтесь колесом мыши.</span>
+                </div>
+                <div class="row">
+                    <div class="col d-grid">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="chart" id="real_value"
+                                   checked>
+                            <label class="form-check-label" for="real_value">
+                                Реальные значения приборов
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="chart" id="clean_value">
+                            <label class="form-check-label" for="clean_value">
+                                "Чистые" сигналы АЦП
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="chart"
+                                   id="per_centum_value">
+                            <label class="form-check-label" for="per_centum_value">
+                                %-ная шкала
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col d-grid gap-3">
+                        <div class="input-group">
+                            <label class="input-group-text" for="date_start_chart">От</label>
+                            <input class="form-control" type="datetime-local" id="date_start_chart">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-text" for="date_finish_chart">До</label>
+                            <input class="form-control" type="datetime-local" id="date_finish_chart">
+                        </div>
+                    </div>
+                    <div class="col d-grid gap-3">
+                        <button class="btn btn-outline-primary" id="create_chart">Построить</button>
+                        <button class="btn btn-outline-primary" id="save_chart" disabled>Скачать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

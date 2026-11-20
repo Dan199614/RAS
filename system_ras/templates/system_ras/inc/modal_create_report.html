@@ -1,0 +1,48 @@
+{% load static %}
+<div class="modal fade" role="dialog" tabindex="-1" id="modal_create_report"
+     aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_create_report_title"></h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col d-grid border-end">
+                    <span class="fw-bold">Формат отчета:</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="report" id="xls_report" checked>
+                        <label class="form-check-label" for="xls_report">
+                            XLS (MS EXCEL)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="report" id="text_report">
+                        <label class="form-check-label" for="text_report">
+                            TEXT (ANSI Text)
+                        </label>
+                    </div>
+                </div>
+                <div class="col d-grid gap-3">
+                    <span class="fw-bold">Временной период:</span>
+                    <div class="input-group">
+                        <label class="input-group-text" for="date_start">От</label>
+                        <input class="form-control" type="datetime-local" id="date_start">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group-text" for="date_finish">До</label>
+                        <input class="form-control" type="datetime-local" id="date_finish">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary w-25" id="create_report"><span
+                        class="spinner-border spinner-border-sm d-none" id="load_report"></span>  Создать
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

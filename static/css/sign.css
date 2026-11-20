@@ -1,0 +1,26 @@
+
+*{
+	font-family: 'Druk Wide', 'sans-serif';
+}
+
+body{
+	background: #ffffff;
+}
+
+form {
+	margin-left: 0 !important;
+}
+
+h1{
+    color: #f0ffff;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    font-size: 26px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #71aaeb;
+}
+#wrapper{
+	height: 1vh;
+}
+
