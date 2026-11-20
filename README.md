@@ -1,6 +1,8 @@
+
 # RAS
 <h2>Проект для портфолио</h2> 
 ❗ Приложение вырезано из основного проекта, поэтому присутствуют лишние импорты.</br>
 Приложение для вывода технологических параметров, составления отчетов и графиков по этим параметрам.
-<img width="1167" height="1030" alt="1a616d3c-89bd-4542-a92b-5e1b958b9c25" src="https://github.com/user-attachments/assets/3de9dedf-cf8c-4ac6-a3c5-8f2d3c8604bc" />
+<img width="1167" height="1030" alt="1a616d3c-89bd-4542-a92b-5e1b958b9c25" src="https://github.com/user-attachments/assets/eda16fef-c025-402c-a414-dc6aaa16c7e5" />
+
 
